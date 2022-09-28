@@ -1,8 +1,22 @@
-import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 import './Profile.css';
 import Photo from '../../images/profile.jpg';
 
 const Profile = () => {
+
+
+    const showToastMessage = () => {
+        toast.success('Good job! Keep Going.', {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
+
+
+
     return (
         <div className='profile-section-calculation'>
 
@@ -12,7 +26,7 @@ const Profile = () => {
                 </div>
                 <div className='name-location'>
                     <h5>S M Katibur Rahman</h5>
-                    <p className='location'>Satkhira,Khulna,Bangladesh</p>
+                    <p className='location'>Satkhira,Khulna,Bangladesh.</p>
                 </div>
             </div>
 
@@ -32,11 +46,11 @@ const Profile = () => {
             </div>
 
             <div className='break-btns'>
-                <button className='break-btn'>10s</button>
-                <button className='break-btn'>20s</button>
-                <button className='break-btn'>30s</button>
-                <button className='break-btn'>40s</button>
-                <button className='break-btn'>50s</button>
+                <button className='break-btn' >10s</button>
+                <button className='break-btn' >20s</button>
+                <button className='break-btn' >30s</button>
+                <button className='break-btn' >40s</button>
+                <button className='break-btn' >50s</button>
             </div>
 
             <div className='exercise-div'>
@@ -50,7 +64,8 @@ const Profile = () => {
             </div>
 
             <div>
-                <button className='activity-completed-btn'>Activity Completed</button>
+                <button className='activity-completed-btn' onClick={() => { showToastMessage() }}>Activity Completed</button>
+                <ToastContainer />
             </div>
         </div>
     );
