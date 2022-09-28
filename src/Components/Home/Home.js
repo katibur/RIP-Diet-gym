@@ -2,6 +2,7 @@ import React from 'react';
 import Activities from '../Activities/Activities';
 import Header from '../Header/Header';
 import Profile from '../Profile/Profile';
+import Questions from '../Questions/Questions'
 
 import './Home.css'
 
@@ -15,6 +16,7 @@ const Home = () => {
             <div>
                 <Profile></Profile>
             </div>
+            <Questions></Questions>
         </div>
     );
 };

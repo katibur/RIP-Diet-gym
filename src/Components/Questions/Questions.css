@@ -2,6 +2,8 @@
     text-align: justify;
     padding: 20px;
     background-color: rgb(150, 175, 249);
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .questions-and-answers-div {
@@ -10,4 +12,22 @@
     border-radius: 20px;
     margin-bottom: 20px;
     background-color: whitesmoke;
+}
+
+
+/* responsive for tablet devices */
+@media screen and (min-width:689px) and (max-width:992px) {
+    .questions-and-answers {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+/* responsive for mobile devices */
+@media screen and (max-width:688px) {
+    .questions-and-answers {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
