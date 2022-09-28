@@ -21,5 +21,5 @@ bonus:
 
 questions will be in component and will be shown under the page
 1.how does react work?
-2.difference between props ans states?
+2.What are the differences between props ans states?
 3.what are the other purposes of useEffect without loading API data?

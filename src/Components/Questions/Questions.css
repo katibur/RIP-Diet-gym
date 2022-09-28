@@ -1,0 +1,13 @@
+.questions-and-answers {
+    text-align: justify;
+    padding: 20px;
+    background-color: rgb(150, 175, 249);
+}
+
+.questions-and-answers-div {
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
