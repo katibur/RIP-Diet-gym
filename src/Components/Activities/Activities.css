@@ -1,0 +1,33 @@
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.activities-section {
+    text-align: left;
+    background-color: rgb(242, 240, 240);
+    padding: 20px;
+}
+
+.activities-container img {
+    height: 80px;
+    width: 50px;
+}
+
+/* responsive for tablet devices */
+@media screen and (min-width:689px) and (max-width:992px) {
+    .activities-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* responsive for mobile devices */
+@media screen and (max-width:688px) {
+    .activities-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

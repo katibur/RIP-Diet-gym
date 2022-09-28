@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
+import './Activities.css'
 
 
 
@@ -15,14 +16,19 @@ const Activities = () => {
 
 
     return (
-        <div>
-            {
-                activities.map(activity => <Activity
-                    key={activity.id}
-                    activity={activity}
-                ></Activity>)
-            }
+
+        <div className='activities-section'>
+            <h3>Select Your Activity</h3>
+            <div className='activities-container'>
+                {
+                    activities.map(activity => <Activity
+                        key={activity.id}
+                        activity={activity}
+                    ></Activity>)
+                }
+            </div>
         </div>
+
     );
 };
 

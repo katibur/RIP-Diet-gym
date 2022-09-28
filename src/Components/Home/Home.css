@@ -1,0 +1,35 @@
+.home {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.activity-section-with-title {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* responsive for tablet devices */
+@media screen and (min-width:689px) and (max-width:992px) {
+    .home {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .activity-section-with-title {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* responsive for mobile devices */
+@media screen and (max-width:688px) {
+    .home {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .activity-section-with-title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
