@@ -1,0 +1,25 @@
+1. must have a name(site+title)
+2. icons beside name
+3. make 9 fake data 4 must have info(1.img, 2.exercise/activity-
+related-name, 3.time for the activity, 4.add to list btn)
+
+4. add-to-list btn e click korle right side e excercise-time e add hobe
+5. right side e profile related info thakte hobe
+6. add-a-break 4ta button thakte hobe,jekno ekta te click korle 
+   break-time e chole asbe
+7. site must be responsive
+
+
+
+bonus:
+1. add-a-break btn e click korle seta local storage e save hoye jabe
+2. page refresh korle break-time theke jabe
+3. folder-strcuture,keys,props-distructuring
+4. min 10 commit
+5. activity complete e click korle toast dite hbe
+
+
+questions will be in component and will be shown under the page
+1.how does react work?
+2.difference between props ans states?
+3.what are the other purposes of useEffect without loading API data?

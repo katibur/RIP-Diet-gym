@@ -1,0 +1,56 @@
+[
+    {
+        "id": "63346bf6866e65ef3738d078",
+        "time": "40 sec",
+        "picture": "https://cdn.shopify.com/s/files/1/1876/4703/articles/shutterstock_1706933392_1000x.jpg?v=1628675222",
+        "name": "Chin Up"
+    },
+    {
+        "id": "63346bf6be6040075d81d398",
+        "time": "300 sec",
+        "picture": "https://www.guidingtech.com/wp-content/uploads/Best-Indoor-Smart-Exercise-Bikes-That-You-Can-Buy-The-Peloton-Bike_8dadce3c69543eb791cf840281e83aa9.jpg",
+        "name": "Cycling"
+    },
+    {
+        "id": "63346bf688de6ec1241b77bc",
+        "time": "120 sec",
+        "picture": "https://manofmany.com/wp-content/uploads/2020/07/Best-Dumbbell-Exercises-For-Men.jpg",
+        "name": "Lifing Dumble"
+    },
+    {
+        "id": "63346bf652dd2159b0a044c2",
+        "time": "200 sec",
+        "picture": "https://www.mensjournal.com/wp-content/uploads/2014/09/Bouldering.jpg?w=1200&h=630&crop=1&quality=86&strip=all",
+        "name": "Climbing"
+    },
+    {
+        "id": "63346bf6c263c16870fcfb63",
+        "time": "80 sec",
+        "picture": "https://www.mensjournal.com/wp-content/uploads/mf/_main_boxjump_2.jpg?w=1200&h=960&crop=1&quality=86&strip=all",
+        "name": "High Jump"
+    },
+    {
+        "id": "63346bf614e35690fa831c9f",
+        "time": "60 sec",
+        "picture": "https://hips.hearstapps.com/hmg-prod/images/young-man-performing-press-ups-on-kettlebells-in-royalty-free-image-1585844910.jpg",
+        "name": "Push Up"
+    },
+    {
+        "id": "63346bf693d464761e0a34fd",
+        "time": "360 sec",
+        "picture": "https://wpassets.trainingpeaks.com/wp-content/uploads/2017/12/13124900/12307-how-to-use-wko4-to-analyze-running-workouts-blog-700x394.jpg",
+        "name": "Running"
+    },
+    {
+        "id": "63346bf6e567b222ba85d9f0",
+        "time": "720 sec",
+        "picture": "https://hips.hearstapps.com/hmg-prod/images/swimmer-diving-after-the-jump-in-swimming-pool-royalty-free-image-153400822-1551476234.jpg?crop=1xw:1xh;center,top&resize=640:*",
+        "name": "Swimming"
+    },
+    {
+        "id": "63346bf6862a8731467d06eb",
+        "time": "1200 sec",
+        "picture": "https://cdn.shopify.com/s/files/1/0053/0114/1604/files/natural-force-blog-natural-force-blog-yoga-poses-recovery-featured_v1_d1c5fe37-138c-4121-b999-702f1e81d17c.jpg?v=1547164748",
+        "name": "Yoga"
+    }
+]
