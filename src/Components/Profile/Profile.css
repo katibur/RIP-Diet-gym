@@ -1,0 +1,24 @@
+.profile-section-calculation {
+    top: 0;
+    position: sticky;
+    background-color: khaki;
+}
+
+.profile {
+    display: flex;
+    padding: 20px;
+    gap: 5px;
+}
+
+.profile img {
+    height: 50px;
+    width: 50px;
+}
+
+.name-location {
+    margin-top: -23px;
+}
+
+.location {
+    margin-top: -15px;
+}
