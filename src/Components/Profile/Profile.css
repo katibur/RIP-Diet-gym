@@ -2,6 +2,7 @@
     top: 0;
     position: sticky;
     background-color: khaki;
+
 }
 
 .profile {
@@ -21,4 +22,76 @@
 
 .location {
     margin-top: -15px;
+}
+
+.body-measurement {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border: 1px solid rgb(221, 215, 215);
+    border-radius: 5px;
+    height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.down-heading {
+    margin-top: -20px;
+}
+
+.measurement-tag {
+    font-weight: lighter;
+}
+
+.break-btns {
+    border: 1px solid rgb(221, 215, 215);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(203, 198, 198);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.break-btn {
+    border-radius: 40%;
+    margin-right: 10px;
+}
+
+.break-btn:hover {
+    background-color: rgb(157, 253, 255);
+    font-weight: bold;
+}
+
+.exercise-div {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.break-div {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+.activity-completed-btn {
+    text-align: center;
+    background-color: rgb(18, 167, 226);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 100px;
+    font-weight: bolder;
+    color: white;
+}
+
+.activity-completed-btn:hover {
+    background-color: aqua;
+
 }
