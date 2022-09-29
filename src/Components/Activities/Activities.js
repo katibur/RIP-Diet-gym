@@ -7,8 +7,6 @@ import Questions from '../Questions/Questions'
 import Profile from '../Profile/Profile';
 import './Activities.css';
 
-
-
 const Activities = () => {
     const [activities, setActivities] = useState([]);
 
@@ -20,15 +18,10 @@ const Activities = () => {
             .then(data => setActivities(data))
     }, []);
 
-
     const handleAddToList = (props) => {
-        console.log(props);
-
         const newList = [...lists, props];
         setLists(newList);
     }
-
-
 
     return (
 
@@ -36,7 +29,7 @@ const Activities = () => {
             <div className='activity-section-with-title'>
                 <Header></Header>
                 <div className='activities-section'>
-                    <h3>Select Your Activity</h3>
+                    <h3>Select Your Activity For Today:</h3>
                     <div className='activities-container'>
                         {
                             activities.map(activity => <Activity

@@ -3,6 +3,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Profile.css';
 import Photo from '../../images/profile.jpg';
 
+import Banner from '../../images/right-sde.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,19 +13,21 @@ import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 const Profile = (props) => {
 
     const { lists } = props;
+
+    // exercise time calculation
     let exerciseTime = 0;
     for (const list of lists) {
         exerciseTime = exerciseTime + list.time;
     }
 
-
-
+    // toast message
     const showToastMessage = () => {
         toast.success('Good job! Keep Going.', {
             position: toast.POSITION.TOP_RIGHT
         });
     };
 
+    // break time button handler and local storage
     const breakBtnHandler = (id) => {
         let breakTime = document.getElementById('break-time');
         breakTime.innerText = id;
@@ -47,6 +51,7 @@ const Profile = (props) => {
     return (
         <div className='profile-section-calculation'>
 
+            {/* top right side's profile */}
             <div className='profile'>
                 <div>
                     <img src={Photo} alt="" />
@@ -57,13 +62,14 @@ const Profile = (props) => {
                 </div>
             </div>
 
+            {/* height,weight,age measurements */}
             <div className='body-measurement'>
                 <div>
                     <h2>75 <span className='measurement-tag'>kg</span></h2>
                     <h5 className='down-heading'>Weight</h5>
                 </div>
                 <div>
-                    <h2>5.11</h2>
+                    <h2>5'11"</h2>
                     <h5 className='down-heading'>Height</h5>
                 </div>
                 <div>
@@ -72,28 +78,33 @@ const Profile = (props) => {
                 </div>
             </div>
 
+            {/* break-time buttons */}
             <div className='break-btns'>
-                <button className='break-btn' onClick={() => { breakBtnHandler(10) }}>10s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(20) }}>20s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(30) }}>30s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(40) }}>40s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(50) }}>50s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(15) }}>15s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(25) }}>25s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(35) }}>35s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(45) }}>45s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(55) }}>55s</button>
             </div>
 
+            {/* exercise time sections */}
             <div className='exercise-div'>
                 <h4>Exercise Time: </h4>
-                <h4 className='exercise-time'>{exerciseTime} Seconds</h4>
+                <h4 className='exercise-time'><span className='times'>{exerciseTime}</span> Seconds</h4>
             </div>
 
+            {/* break time section */}
             <div className='break-div'>
                 <h4 id='break-time-heading'>Break Time: </h4>
-                <h4><span className='break-time' id='break-time'>00</span> Seconds</h4>
+                <h4><span className='break-time times' id='break-time'>0</span> Seconds</h4>
             </div>
 
             <div>
                 <button className='activity-completed-btn' onClick={() => { showToastMessage() }}>Activity Completed</button>
                 <ToastContainer />
             </div>
+
+            <img src={Banner} alt="" />
         </div>
     );
 };
