@@ -1,5 +1,8 @@
 import React from 'react';
-import './Activity.css'
+import './Activity.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faList } from '@fortawesome/free-solid-svg-icons';
 
 const Activity = (props) => {
 
@@ -16,7 +19,7 @@ const Activity = (props) => {
                 <p><b>For Age: </b> {age}</p>
                 <p><b>Time Required:</b> {time} Sec</p>
             </div>
-            <button className='add-to-list-button' onClick={() => { handleAddToList(props.activity) }}>Add To List</button>
+            <button className='add-to-list-button' onClick={() => { handleAddToList(props.activity) }}>Add To List <FontAwesomeIcon icon={faList}></FontAwesomeIcon></button>
         </div>
     );
 };

@@ -1,18 +1,16 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Profile.css';
-import Photo from '../../images/profile.jpg';
 
+import Photo from '../../images/profile.jpg';
 import Banner from '../../images/right-sde.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
-
-
 const Profile = (props) => {
 
-    const { lists } = props;
+    const { breakTime, breakTimeBtnHandler, lists } = props;
 
     // exercise time calculation
     let exerciseTime = 0;
@@ -26,26 +24,6 @@ const Profile = (props) => {
             position: toast.POSITION.TOP_RIGHT
         });
     };
-
-    // break time button handler and local storage
-    const breakBtnHandler = (id) => {
-        let breakTime = document.getElementById('break-time');
-        breakTime.innerText = id;
-        const keyLocalStorage = 'break-time';
-        const breaks = getStoredBreaks();
-        breaks[keyLocalStorage] = breakTime.innerText;
-        localStorage.setItem('breaks', JSON.stringify(breaks))
-    }
-
-    const getStoredBreaks = () => {
-        const storedBreaks = localStorage.getItem('breaks');
-        let breaks = {};
-        if (storedBreaks) {
-            breaks = JSON.parse(storedBreaks);
-        }
-        return breaks;
-    }
-
 
 
     return (
@@ -80,11 +58,11 @@ const Profile = (props) => {
 
             {/* break-time buttons */}
             <div className='break-btns'>
-                <button className='break-btn' onClick={() => { breakBtnHandler(15) }}>15s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(25) }}>25s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(35) }}>35s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(45) }}>45s</button>
-                <button className='break-btn' onClick={() => { breakBtnHandler(55) }}>55s</button>
+                <button className='break-btn' onClick={() => { breakTimeBtnHandler(15) }}>15s</button>
+                <button className='break-btn' onClick={() => { breakTimeBtnHandler(25) }}>25s</button>
+                <button className='break-btn' onClick={() => { breakTimeBtnHandler(35) }}>35s</button>
+                <button className='break-btn' onClick={() => { breakTimeBtnHandler(45) }}>45s</button>
+                <button className='break-btn' onClick={() => { breakTimeBtnHandler(55) }}>55s</button>
             </div>
 
             {/* exercise time sections */}
@@ -96,7 +74,7 @@ const Profile = (props) => {
             {/* break time section */}
             <div className='break-div'>
                 <h4 id='break-time-heading'>Break Time: </h4>
-                <h4><span className='break-time times' id='break-time'>0</span> Seconds</h4>
+                <h4><span className='break-time times' id='break-time'>{breakTime}</span> Seconds</h4>
             </div>
 
             <div>
@@ -105,6 +83,7 @@ const Profile = (props) => {
             </div>
 
             <img src={Banner} alt="" />
+
         </div>
     );
 };

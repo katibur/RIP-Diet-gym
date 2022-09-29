@@ -8,10 +8,35 @@ import Profile from '../Profile/Profile';
 import './Activities.css';
 
 const Activities = () => {
+
     const [activities, setActivities] = useState([]);
 
     const [lists, setLists] = useState([]);
 
+
+    // break time handler and local storage
+    const getTime = () => {
+        let listTime = localStorage.getItem('break-time');
+        if (listTime) {
+            return JSON.parse(localStorage.getItem('break-time'));
+        }
+        else {
+            return [];
+        }
+    }
+
+    const [breakTime, setBreakTime] = useState(getTime(0));
+
+    useEffect(() => {
+        localStorage.setItem('break-time', JSON.stringify(breakTime))
+    }, [breakTime]);
+
+    const breakTimeBtnHandler = (id) => {
+        setBreakTime(id);
+    }
+
+
+    // fetching data from json file
     useEffect(() => {
         fetch('Activities.json')
             .then(res => res.json())
@@ -45,6 +70,8 @@ const Activities = () => {
 
             <div>
                 <Profile
+                    breakTime={breakTime}
+                    breakTimeBtnHandler={breakTimeBtnHandler}
                     lists={lists}
                 ></Profile>
             </div>
