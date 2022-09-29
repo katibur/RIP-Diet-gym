@@ -8,7 +8,14 @@ import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Profile = () => {
+const Profile = (props) => {
+
+    const { lists } = props;
+    let exerciseTime = 0;
+    for (const list of lists) {
+        exerciseTime = exerciseTime + list.time;
+    }
+
 
 
     const showToastMessage = () => {
@@ -20,6 +27,19 @@ const Profile = () => {
     const breakBtnHandler = (id) => {
         let breakTime = document.getElementById('break-time');
         breakTime.innerText = id;
+        const keyLocalStorage = 'break-time';
+        const breaks = getStoredBreaks();
+        breaks[keyLocalStorage] = breakTime.innerText;
+        localStorage.setItem('breaks', JSON.stringify(breaks))
+    }
+
+    const getStoredBreaks = () => {
+        const storedBreaks = localStorage.getItem('breaks');
+        let breaks = {};
+        if (storedBreaks) {
+            breaks = JSON.parse(storedBreaks);
+        }
+        return breaks;
     }
 
 
@@ -62,11 +82,11 @@ const Profile = () => {
 
             <div className='exercise-div'>
                 <h4>Exercise Time: </h4>
-                <h4 className='exercise-time'>00</h4>
+                <h4 className='exercise-time'>{exerciseTime} Seconds</h4>
             </div>
 
             <div className='break-div'>
-                <h4>Break Time: </h4>
+                <h4 id='break-time-heading'>Break Time: </h4>
                 <h4><span className='break-time' id='break-time'>00</span> Seconds</h4>
             </div>
 
