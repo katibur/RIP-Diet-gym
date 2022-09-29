@@ -1,10 +1,12 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
 import './Profile.css';
 import Photo from '../../images/profile.jpg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const Profile = () => {
 
@@ -14,6 +16,11 @@ const Profile = () => {
             position: toast.POSITION.TOP_RIGHT
         });
     };
+
+    const breakBtnHandler = (id) => {
+        let breakTime = document.getElementById('break-time');
+        breakTime.innerText = id;
+    }
 
 
 
@@ -26,7 +33,7 @@ const Profile = () => {
                 </div>
                 <div className='name-location'>
                     <h5>S M Katibur Rahman</h5>
-                    <p className='location'>Satkhira,Khulna,Bangladesh.</p>
+                    <p className='location'> <FontAwesomeIcon icon={faLocationCrosshairs}></FontAwesomeIcon> Satkhira,Khulna,Bangladesh.</p>
                 </div>
             </div>
 
@@ -46,11 +53,11 @@ const Profile = () => {
             </div>
 
             <div className='break-btns'>
-                <button className='break-btn' >10s</button>
-                <button className='break-btn' >20s</button>
-                <button className='break-btn' >30s</button>
-                <button className='break-btn' >40s</button>
-                <button className='break-btn' >50s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(10) }}>10s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(20) }}>20s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(30) }}>30s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(40) }}>40s</button>
+                <button className='break-btn' onClick={() => { breakBtnHandler(50) }}>50s</button>
             </div>
 
             <div className='exercise-div'>
@@ -60,7 +67,7 @@ const Profile = () => {
 
             <div className='break-div'>
                 <h4>Break Time: </h4>
-                <h4 className='break-time'>00</h4>
+                <h4><span className='break-time' id='break-time'>00</span> Seconds</h4>
             </div>
 
             <div>

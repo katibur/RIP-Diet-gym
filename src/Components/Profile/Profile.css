@@ -12,16 +12,20 @@
 }
 
 .profile img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
 
 .name-location {
-    margin-top: -23px;
+    margin-top: -20px;
 }
 
 .location {
     margin-top: -15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .body-measurement {
@@ -62,6 +66,8 @@
     margin-right: 10px;
 }
 
+
+
 .break-btn:hover {
     background-color: rgb(157, 253, 255);
     font-weight: bold;
@@ -69,14 +75,28 @@
 
 .exercise-div {
     display: flex;
+    color: white;
     text-align: center;
     justify-content: space-evenly;
+    background-color: gray;
+    border: 1px solid rgb(221, 215, 215);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .break-div {
     display: flex;
+    color: whitesmoke;
     text-align: center;
     justify-content: space-evenly;
+    background-color: gray;
+    border: 1px solid rgb(221, 215, 215);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 

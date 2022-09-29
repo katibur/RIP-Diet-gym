@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
-import './Activities.css'
+import Questions from '../Questions/Questions'
+import './Activities.css';
 
 
 
@@ -27,6 +28,7 @@ const Activities = () => {
                     ></Activity>)
                 }
             </div>
+            <Questions></Questions>
         </div>
 
     );

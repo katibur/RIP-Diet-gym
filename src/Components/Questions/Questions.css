@@ -2,8 +2,7 @@
     text-align: justify;
     padding: 20px;
     background-color: rgb(150, 175, 249);
-    margin-left: 70px;
-    margin-right: 70px;
+    border-radius: 10px;
 }
 
 .questions-and-answers-div {
